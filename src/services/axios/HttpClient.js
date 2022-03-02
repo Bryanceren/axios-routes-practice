@@ -13,7 +13,12 @@ const HttpClient = async (url, data = {}, method = "get") => {
   }
   try {
     return await axios(config);
-  } catch (e) {}
+  } catch (e) {
+    alert(
+      e.response.status + "-" + e.response.data.message ||
+        e.response.data.description
+    );
+  }
 };
 
 export { HttpClient };

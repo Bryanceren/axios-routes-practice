@@ -1,13 +1,13 @@
 import axios from "axios";
 
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 export const AxiosInterceptor = () => {
   axios.interceptors.request.use(
     (request) => {
       const apiToken = sessionStorage.getItem("token");
       const isLoggedIn = apiToken;
-      const isApiUrl = request.url.startsWith(process.env.REACT_APP_API_URL);
 
-      if (isLoggedIn && isApiUrl) {
+      if (isLoggedIn) {
         request.headers.common.Authorization = `Bearer ${apiToken}`;
       }
 

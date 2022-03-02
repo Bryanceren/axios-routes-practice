@@ -1,7 +1,11 @@
-import { Route } from "react-router-dom";
-import Index from "../../pages/Login/Index";
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "../../pages/Dash/Dashboard";
 
 const AuthRoutes = () => {
-  return <Route path="login" element={<Index />} />;
+  return (
+    <Routes>
+      <Route index element={<Dashboard />}></Route>
+    </Routes>
+  );
 };
 export default AuthRoutes;

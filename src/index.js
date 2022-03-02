@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./assets/styles/App.css";
 import "./assets/styles/index.css";
 import "./assets/styles/Login.css";
+import "./assets/styles/breakpoints.css";
 import App from "./layouts/main/App";
 import reportWebVitals from "./reportWebVitals";
 import { AxiosInterceptor } from "./services/axios/AxiosInterceptor";
